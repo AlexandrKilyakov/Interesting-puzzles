@@ -1,0 +1,72 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	background: url('https://i.pinimg.com/originals/32/25/af/3225aff52ea69d1762e3bf21e0c40485.jpg') no-repeat left top;
+	background-size: cover;
+	color: #dedede;
+	background-attachment: fixed;
+}
+
+.blur 
+{
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(3px);
+	height: 100vh;
+	width: 100wh;
+}
+
+.container {padding: 10px 0 0 50px;}
+
+h1{margin-bottom: 20px;}
+p{color: #7b7b7b;}
+
+form
+{
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	width: 100px;
+}
+
+label {margin-bottom: 10px;}
+
+button
+{
+	margin-top: 10px;
+	border: none;
+	font-weight: 700;
+	color: white;
+	text-decoration: none;
+	padding: 10px 15px;
+	border-radius: 3px;
+	background: #464545;
+	box-shadow: 0 -3px #3c3c3c inset;
+	transition: 0.2s;
+}
+
+button:hover { background: #535353; }
+
+button:active {
+	background: #828282;
+	box-shadow: 0 3px #3c3c3c inset;
+}
+
+input
+{
+	padding: 5px;
+	border-radius: 10px;
+	border:0;
+	box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+}
+
+#result
+{
+	width: 1240px;
+	background: rgba(0, 0, 15, 0.1);
+	backdrop-filter: blur(8px);
+}

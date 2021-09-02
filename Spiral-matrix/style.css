@@ -1,0 +1,81 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	background: url('https://i.redd.it/t7yvdhm0p2i41.jpg') no-repeat left top;
+	background-size: cover;
+}
+
+.blur {
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(5px);
+	height: 100vh;
+	width: 100wh;
+}
+
+.container
+{
+	padding: 10px 0 0 50px;
+}
+
+h1{margin-bottom: 20px;}
+
+form
+{
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	width: 100px;
+}
+
+label {margin-bottom: 10px;}
+
+button
+{
+	margin-top: 10px;
+	border: none;
+	font-weight: 700;
+	color: white;
+	text-decoration: none;
+	padding: 10px 15px;
+	border-radius: 3px;
+	background: rgb(64,199,129);
+	box-shadow: 0 -3px rgb(53,167,110) inset;
+	transition: 0.2s;
+}
+
+button:hover { background: rgb(53, 167, 110); }
+
+button:active {
+	background: rgb(33,147,90);
+	box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+input
+{
+	padding: 5px;
+	border-radius: 10px;
+	border:0;
+	box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+}
+
+table 
+{
+	border-collapse: collapse;
+	width: auto;
+	border-spacing: 0;
+	background: rgba(0, 119, 0, 0.5);
+	backdrop-filter: blur(5px);
+}
+
+td
+{
+	border: 2px solid #dbffdb;
+	padding: 4px;
+	text-align: center;
+	color: white;
+}
