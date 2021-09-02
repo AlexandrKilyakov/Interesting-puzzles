@@ -11,16 +11,16 @@
 
 Код из файла js:
 ```javascript
-var max = input.value;
-var arrIP = new Array(max);
-var start = 1;
-var border = 0, a = 0, b = 0;
-var minA = 0, minB = 0, maxA = max, maxB = max;
+let max = input.value;
+let arrIP = new Array(max);
+let start = 1;
+let border = 0, a = 0, b = 0;
+let minA = 0, minB = 0, maxA = max, maxB = max;
 
-for (var i = 0; i < max; i++) // Зополняем нулями матрицу
+for (let i = 0; i < max; i++) // Зополняем нулями матрицу
 {
   arrIP[i] = new Array(max);
-  for (var j = 0; j < max; j++) 
+  for (let j = 0; j < max; j++) 
   {
     arrIP[i][j] = 0;
   }
