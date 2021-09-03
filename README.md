@@ -159,31 +159,3 @@ for (i = 0; i < row_num; i++)
     }
 }
 ```
-
-Код для нахождения Х:
-```C#
-for (int i = 0; i < 5; i++)
-{
-    for (int j = 0; j < 6; j++)
-    {
-        this.Controls.RemoveByKey("x" + Convert.ToString(i) + Convert.ToString(j));
-    }
-    this.Controls.RemoveByKey("s" + Convert.ToString(i));
-}
-
-for (int i = 0; i < row_num; i++)
-{
-    string X = Convert.ToString(Math.Round(arrA[i, col_num - 1], 2));
-
-    Label label = new Label
-    {
-        Height = label1.Size.Height,
-        Width = label1.Size.Width + 100,
-        Font = new Font(label1.Font.ToString(), label1.Font.Size),
-        Name = "s" + Convert.ToString(i),
-        Text = $"x{Convert.ToString(i + 1)} = {X}",
-        Location = new Point(50, 50 + i * 35)
-    };
-    this.Controls.Add(label);
-}
-```
