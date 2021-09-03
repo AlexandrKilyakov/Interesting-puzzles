@@ -2,8 +2,9 @@
 
 В данном репозитории я собираю собственные решения задач, которые мне показались интересными.
 В данном репозитории есть следующие задачи:
-1. Спиральная матрица (Spiral-matrix);
-2. Четные числа Фибоначчи (Even-Fibonacci-Numbers).
+1. Спиральная матрица - (Spiral-matrix);
+2. Четные числа Фибоначчи - (Even-Fibonacci-Numbers);
+3. Метод Жордана-Гаусса - (Jordan-Gauss-method).
 
 ## Спиральная матрица
 
@@ -95,3 +96,94 @@ for(var i = 1; i < n; i++)
 Результат:
 
 ![Показан результат](https://user-images.githubusercontent.com/76633175/131887354-cfae9cbe-4f90-4140-aff8-952d59cd2898.png)
+
+
+## Метод Жордана-Гаусса
+
+Метод Гаусса — Жордана — метод, который используется для решения квадратных систем линейных алгебраических уравнений, нахождения обратной матрицы, нахождения координат вектора в заданном базисе или отыскания ранга матрицы. Метод является модификацией метода Гаусса.
+
+Решение данного метода реализованно в виде форм, созданных благодаря Visual Studio, на ЯП C#. Первая страница предлагает ввести размеры матрицы, после чего заполнить необходимые поля. После этого можно перейти на вторую форму, и получить решение, после чего найти все Х-ы.
+
+Форма 1 после заполнения:
+
+![image](https://user-images.githubusercontent.com/76633175/132061370-126453a7-ab56-4bf1-97e7-33eaa17c7322.png)
+
+Вывод формы 2:
+
+![image](https://user-images.githubusercontent.com/76633175/132061411-4644e2c4-4e60-497f-9ac4-27c6a99dde5d.png)
+
+Решение:
+
+![image](https://user-images.githubusercontent.com/76633175/132061424-2ed2041c-20c6-489e-8446-be7f4a3060f5.png)
+
+Найти Х:
+
+![image](https://user-images.githubusercontent.com/76633175/132061448-8e928fb3-af99-4a37-a00b-3452f8f3c247.png)
+
+Код для получения обратной матрицы:
+```C#
+for (i = 0; i < row_num; i++)
+{
+    for (j = 0; j < col_num; j++)
+    {
+        if (i == j && col_num - 1 != j)
+        {
+            partially_pivot(arrA, i, j);
+
+            diagonal_element = arrA[i, j];
+            k = i;
+            l = j;
+
+            for (l = 0; l < col_num; l++)
+            {
+                // для изготовления диагонального элемента 1
+                arrA[k, l] /= diagonal_element;
+                div++;
+            }
+
+
+            for (k = 0; k < row_num; k++)
+            {
+                //setting flag = элемент в соответствующей строке, который находится точно под рассматриваемым диагональным элементом
+                flag = arrA[k, j];
+
+                for (l = 0; l < col_num; l++)
+                    if (k != i)
+                    {
+                        // выполнение строковой операции, чтобы охватить все элементы = 0, кроме диагонального элемента
+                        arrA[k, l] = (arrA[k, l]) - flag * (arrA[i, l]);
+                    }
+
+            }
+        }
+    }
+}
+```
+
+Код для нахождения Х:
+```C#
+for (int i = 0; i < 5; i++)
+{
+    for (int j = 0; j < 6; j++)
+    {
+        this.Controls.RemoveByKey("x" + Convert.ToString(i) + Convert.ToString(j));
+    }
+    this.Controls.RemoveByKey("s" + Convert.ToString(i));
+}
+
+for (int i = 0; i < row_num; i++)
+{
+    string X = Convert.ToString(Math.Round(arrA[i, col_num - 1], 2));
+
+    Label label = new Label
+    {
+        Height = label1.Size.Height,
+        Width = label1.Size.Width + 100,
+        Font = new Font(label1.Font.ToString(), label1.Font.Size),
+        Name = "s" + Convert.ToString(i),
+        Text = $"x{Convert.ToString(i + 1)} = {X}",
+        Location = new Point(50, 50 + i * 35)
+    };
+    this.Controls.Add(label);
+}
+```
