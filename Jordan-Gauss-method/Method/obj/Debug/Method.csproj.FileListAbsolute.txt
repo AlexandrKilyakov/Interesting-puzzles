@@ -1,0 +1,11 @@
+C:\Users\sosed\source\repos\Method\Method\bin\Debug\Method.exe.config
+C:\Users\sosed\source\repos\Method\Method\bin\Debug\Method.exe
+C:\Users\sosed\source\repos\Method\Method\bin\Debug\Method.pdb
+C:\Users\sosed\source\repos\Method\Method\obj\Debug\Method.csprojAssemblyReference.cache
+C:\Users\sosed\source\repos\Method\Method\obj\Debug\Method.Form1.resources
+C:\Users\sosed\source\repos\Method\Method\obj\Debug\Method.Form2.resources
+C:\Users\sosed\source\repos\Method\Method\obj\Debug\Method.Properties.Resources.resources
+C:\Users\sosed\source\repos\Method\Method\obj\Debug\Method.csproj.GenerateResource.cache
+C:\Users\sosed\source\repos\Method\Method\obj\Debug\Method.csproj.CoreCompileInputs.cache
+C:\Users\sosed\source\repos\Method\Method\obj\Debug\Method.exe
+C:\Users\sosed\source\repos\Method\Method\obj\Debug\Method.pdb
