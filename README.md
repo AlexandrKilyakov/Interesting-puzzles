@@ -88,8 +88,8 @@ while(start <= max**2) // Вносим данные по спирали
 Код из файла js:
 ```javascript
 let n = input.value;
-	let FN = [0, 2];
-	for(let i = 1; i < n; i++) FN.push(4 * FN[i] + FN[i - 1]);
+let FN = [0, 2];
+for(let i = 1; i < n; i++) FN.push(4 * FN[i] + FN[i - 1]);
 ```
 
 Результат:
